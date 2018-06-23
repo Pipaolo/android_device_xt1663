@@ -37,7 +37,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
 	mtk_guiext.cpp
-LOCAL_SHARED_LIBRARIES := libgui_ext
+LOCAL_SHARED_LIBRARIES := libui
 LOCAL_MODULE := libmtkshim_guiext
 LOCAL_MODULE_TAGS := optional
 	

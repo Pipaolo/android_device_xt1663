@@ -20,11 +20,12 @@ PRODUCT_PACKAGES += \
    libmtk_symbols \
    libstlport \
    libmtkshim_uiext \
+   libmtkshim_guiext \
    libui_ext
 
 #Symbols
-LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib64/libui_ext.so|libmtkshim_uiext.so:/system/vendor/lib/libui_ext.so|libmtkshim_uiext.so
-LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib64/libgui_ext.so|libmtkshim_guiext.so:/system/vendor/lib/libgui_ext.so|libmtkshim_guiext.so
+LINKER_FORCED_SHIM_LIBS := /system/vendor/lib64/libui_ext.so|libmtkshim_uiext.so:/system/vendor/lib/libui_ext.so|libmtkshim_uiext.so:/system/lib/libgui.so|libmtk_symbols.so:/system/lib64/libgui.so|libmtk_symbols.so
+LINKER_FORCED_SHIM_LIBS += /system/vendor/lib/libgui_ext.so|libmtkshim_guiextso:/system/vendor/lib64/libgui_ext.so|libmtkshim_guiext.so
 
 
 # # Doze Package

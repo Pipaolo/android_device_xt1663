@@ -266,7 +266,7 @@ allow system_server nvram_agent_service:service_manager find;
 
 # Date : 2015/06/12
 # Operation: TEEI integration
-# Purpose: access for fp device 
+# Purpose: access for fp device
 allow system_server teei_fp_device:chr_file rw_file_perms;
 allow system_server teei_client_device:chr_file r_file_perms;
 
@@ -310,3 +310,5 @@ allow system_server debugfs:dir { read open };
 allow system_server unlabeled:file unlink;
 allow system_server wmt_prop:file { read open getattr };
 allow system_server wifi_data_file:sock_file { unlink };
+allow system_server block_device:blk_file { read };
+allow system_server block_device:blk_file { open };

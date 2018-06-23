@@ -1,10 +1,2 @@
-#include <stdint.h>
-extern "C" void _ZN7android11IDumpTunnel11asInterfaceERKNS_2spINS_7IBinderEEE () {}  
-extern "C" void _ZN7android4Rect10EMPTY_RECTE () {}
-extern "C" {
-    void _ZN7android14SurfaceControl8setLayerEj(uint32_t);
-
-    void _ZN7android14SurfaceControl8setLayerEi(int32_t layer){
-        _ZN7android14SurfaceControl8setLayerEj(static_cast<uint32_t>(layer));
-    }
-}
+extern "C" void _ZN7android5Fence5mergeEPKcRKNS_2spIS0_EES6_ () {}
+extern "C" void _ZN7android11IDumpTunnel11asInterfaceERKNS_2spINS_7IBinderEEE () {}
