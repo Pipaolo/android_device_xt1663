@@ -9,5 +9,5 @@ PRODUCT_PACKAGES += \
     Snap
 
 # Configuration
-# PRODUCT_COPY_FILES += \
-#     $(LOCAL_PATH)/configs/camera/camerasize.xml:system/etc/camerasize.xml
+ PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/camera/camerasize.xml:system/etc/camerasize.xml
