@@ -111,3 +111,6 @@ allow ccci_mdinit persist_ril_prop:file { read open getattr };
 allow ccci_mdinit mediatek_prop:file { read open getattr ioctl };
 allow ccci_mdinit mtk_md_prop:file { read open getattr ioctl };
 allow ccci_mdinit rootfs:lnk_file { getattr };
+#Added by pipao
+allow init ccci_monitor_device:chr_file { write };
+allow init ccci_device:chr_file { write };

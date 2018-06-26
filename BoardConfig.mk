@@ -25,23 +25,20 @@ include $(LOCAL_PATH)/board/*.mk
 -include vendor/motorola/XT1663/BoardConfigVendor.mk
 
 #######################################################################
-# MTK_PROJECT_CONFIG ?= $(LOCAL_PATH)/ProjectConfig.mk
-# include $(MTK_PROJECT_CONFIG)
-#
-# MTK_INTERNAL_CDEFS := $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)))
-# MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),$(foreach v,$(shell echo $($(t)) | tr '[a-z]' '[A-Z]'),-D$(v))))
-# MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)=\"$($(t))\"))
-#
-# BOARD_GLOBAL_CFLAGS += $(MTK_INTERNAL_CDEFS)
-# BOARD_GLOBAL_CPPFLAGS += $(MTK_INTERNAL_CDEFS)
+MTK_PROJECT_CONFIG ?= $(LOCAL_PATH)/ProjectConfig.mk
+include $(MTK_PROJECT_CONFIG)
+
+MTK_INTERNAL_CDEFS := $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)))
+MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),$(foreach v,$(shell echo $($(t)) | tr '[a-z]' '[A-Z]'),-D$(v))))
+MTK_INTERNAL_CDEFS += $(foreach t,$(AUTO_ADD_GLOBAL_DEFINE_BY_NAME_VALUE),$(if $(filter-out no NO none NONE false FALSE,$($(t))),-D$(t)=\"$($(t))\"))
+
+BOARD_GLOBAL_CFLAGS += $(MTK_INTERNAL_CDEFS)
+BOARD_GLOBAL_CPPFLAGS += $(MTK_INTERNAL_CDEFS)
 
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
-
-# init
-TARGET_PROVIDES_INIT_RC := true
 
 # system.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop

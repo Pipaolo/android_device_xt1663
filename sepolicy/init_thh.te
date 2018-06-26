@@ -22,3 +22,8 @@ init_daemon_domain(init_thh_service)
 
 #for debug only
 #write_klog(init_thh_service)
+
+#Added by pipao
+allow init teei_data_file:file { append };
+allow init teei_client_device:chr_file { write };
+allow init teei_client_device:chr_file { ioctl };

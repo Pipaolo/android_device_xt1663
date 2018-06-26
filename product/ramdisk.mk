@@ -1,20 +1,40 @@
-# Ramdisk files
- PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/rootdir/factory_init.project.rc:root/factory_init.project.rc \
-     $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
-     $(LOCAL_PATH)/rootdir/fstab.mt6755:root/fstab.mt6755 \
-     $(LOCAL_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc \
-     $(LOCAL_PATH)/rootdir/init.common_svc.rc:root/init.common_svc.rc \
-     $(LOCAL_PATH)/rootdir/init.microtrust.rc:root/init.microtrust.rc \
-     $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
-     $(LOCAL_PATH)/rootdir/init.mt6755.rc:root/init.mt6755.rc \
-     $(LOCAL_PATH)/rootdir/init.mt6755.usb.rc:root/init.mt6755.usb.rc \
-     $(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
-     $(LOCAL_PATH)/rootdir/init.recovery.mt6755.rc:root/init.recovery.mt6755.rc \
-     $(LOCAL_PATH)/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
-     $(LOCAL_PATH)/rootdir/meta_init.project.rc:root/meta_init.project.rc \
-     $(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
-     $(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
-     $(LOCAL_PATH)/rootdir/ueventd.mt6755.rc:root/ueventd.mt6755.rc \
-     $(LOCAL_PATH)/rootdir/init.mal.rc:vendor/etc/init/init.mal.rc \
-     $(LOCAL_PATH)/rootdir/init.wod.rc:vendor/etc/init/init.wod.rc
+# Root
+PRODUCT_PACKAGES += \
+    enableswap.sh \
+    fstab.mt6755 \
+    init.rc \
+    init.aee.rc \
+    init.common_svc.rc \
+    init.connectivity.rc \
+    init.environ.rc \
+    init.epdg.rc \
+    init.mal.rc \
+    init.microtrust.rc \
+    init.modem.rc \
+    init.mt6755.rc \
+    init.mt6755.usb.rc \
+    init.project.rc \
+    init.recovery.mt6755.rc \
+    init.rilproxy.rc \
+    init.usb.configfs.rc \
+    init.usb.rc \
+    init.volte.rc \
+    init.wod.rc \
+    init.zygote32.rc \
+    init.zygote64_32.rc \
+		meta_init.rc \
+		meta_init.modem.rc \
+		meta_init.project.rc \
+    ueventd.mt6755.rc \
+    ueventd.rc \
+    fuelgauged_static \
+    slideshow \
+    ueventd \
+    watchdogd
+
+ # init
+ PRODUCT_PACKAGES += \
+     libinit \
+     init
+
+     # $(LOCAL_PATH)/rootdir/init.rc:root/init.rc

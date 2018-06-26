@@ -8,4 +8,7 @@ PRESENT_TIME_OFFSET_FROM_VSYNC_NS := 0
 MTK_HWC_SUPPORT := yes
 MTK_HWC_VERSION := 1.5.0
 MTK_GPU_VERSION := mali midgard r12p1
-BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
+BOARD_EGL_CFG := $(LOCAL_PATH)/egl.cfg
+
+# Override renderscript driver
+OVERRIDE_RS_DRIVER := libRSDriver_mtk.so

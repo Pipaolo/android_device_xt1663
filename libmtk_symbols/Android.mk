@@ -9,7 +9,8 @@ LOCAL_SRC_FILES := \
     mtk_omx.cpp \
     mtk_ui.cpp \
     mtk_wvm.cpp \
-    mtk_xlog.cpp
+    mtk_xlog.cpp \
+		vtservice.cpp
 
 # only for 64bit libraries
 LOCAL_SRC_FILES_64 := mtk_parcel.cpp
@@ -30,7 +31,7 @@ LOCAL_SRC_FILES := \
 LOCAL_SHARED_LIBRARIES := libui_ext
 LOCAL_MODULE := libmtkshim_uiext
 LOCAL_MODULE_TAGS := optional
-	
+
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -40,5 +41,5 @@ LOCAL_SRC_FILES := \
 LOCAL_SHARED_LIBRARIES := libui
 LOCAL_MODULE := libmtkshim_guiext
 LOCAL_MODULE_TAGS := optional
-	
-include $(BUILD_SHARED_LIBRARY)	
+
+include $(BUILD_SHARED_LIBRARY)
