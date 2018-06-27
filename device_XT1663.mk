@@ -48,3 +48,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Vendor product configurations
 $(call inherit-product-if-exists, vendor/motorola/XT1663/XT1663-vendor.mk)
+
+# Audio
+$(call inherit-product, $(LOCAL_PATH)/configs/audio/audio.mk)
+
+# Carrier configs
+$(call inherit-product, $(LOCAL_PATH)/configs/carrier/carrier.mk)
+
+# Media
+$(call inherit-product, $(LOCAL_PATH)/configs/media/media.mk)
+
+# Internet access
+$(call inherit-product, $(LOCAL_PATH)/configs/ip/ip.mk)
+
+# Other configuration files
+$(call inherit-product, $(LOCAL_PATH)/configs/configs.mk)
+
+# Dalvik configurations
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
+
+# Hack for building without kernel sources
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
