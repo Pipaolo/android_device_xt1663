@@ -107,6 +107,3 @@ allow init debugfs:file { write };
 allow init surfaceflinger:process { noatsecure };
 allow init mtk_agpsd:process { noatsecure };
 allow init mediaserver:process { noatsecure };
-
-# Added by pipao
-#allow init system_file:file { execute_no_trans };

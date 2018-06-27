@@ -1,13 +1,13 @@
 # ==============================================
-# Policy File of /system/bin/spm_loader Executable File
+# Policy File of /system/bin/spm_loader Executable File 
 
 
 # ==============================================
 # Type Declaration
 # ==============================================
 
-type spm_loader_exec_t exec_type file_type;
-type spm_loader domain;
+type spm_loader_exec , exec_type, file_type;
+type spm_loader ,domain;
 
 # ==============================================
 # Android Policy Rule

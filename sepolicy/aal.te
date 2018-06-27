@@ -1,5 +1,5 @@
 # ==============================================
-# Policy File of /system/binaal Executable File
+# Policy File of /system/binaal Executable File 
 
 # ==============================================
 # Type Declaration
@@ -43,6 +43,3 @@ allow aal aal_service:service_manager add;
 # Operation : Migration
 # Purpose : Allow permission check
 allow aal permission_service:service_manager { find };
-
-#Added by pipao
-allow init graphics_device:chr_file { ioctl };

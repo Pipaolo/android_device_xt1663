@@ -7,7 +7,7 @@
 # ==============================================
 
 type enableswap_exec , exec_type, file_type;
-type enableswap ,domain, mlstrustedsubject;
+type enableswap ,domain;
 
 # ==============================================
 # Android Policy Rule
@@ -63,7 +63,3 @@ allow enableswap rootfs:file { read open };
 allow enableswap sysfs_zram:dir search;
 allow enableswap sysfs_zram:file {  write open };
 allow enableswap rootfs:lnk_file { getattr };
-allow enableswap toolbox_exec:file { getattr };
-allow enableswap toolbox_exec:file { execute };
-allow enableswap toolbox_exec:file { read open };
-allow enableswap toolbox_exec:file { execute_no_trans };

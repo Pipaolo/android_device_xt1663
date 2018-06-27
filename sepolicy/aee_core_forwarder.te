@@ -1,5 +1,5 @@
 # ==============================================
-# Policy File of /system/binaee_core_forwarder Executable File
+# Policy File of /system/binaee_core_forwarder Executable File 
 
 
 # ==============================================
@@ -47,7 +47,7 @@ allow aee_core_forwarder kernel:fifo_file read;
 allow aee_core_forwarder domain:dir r_dir_perms;
 allow aee_core_forwarder domain:file r_file_perms;
 
-#read
+#read 
 allow aee_core_forwarder sysfs_wake_lock:file { read write open };
 
 # Date : 2015/07/11
@@ -62,14 +62,3 @@ allow aee_core_forwarder mnt_user_file:dir search;
 allow aee_core_forwarder mnt_user_file:lnk_file read;
 #allow aee_core_forwarder storage_file:dir search;
 allow aee_core_forwarder storage_file:lnk_file read;
-
-#Added some stuff
-allow kernel sysfs_wake_lock:file { read write open };
-allow kernel kernel:capability2 { block_suspend };
-allow kernel init:file { read };
-allow kernel init:file { open };
-allow kernel init:file { getattr };
-allow kernel persist_aee_prop:file { read };
-allow kernel persist_aee_prop:file { open };
-allow kernel persist_aee_prop:file { getattr };
-allow kernel init:dir { search };

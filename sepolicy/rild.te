@@ -2,7 +2,4 @@
 # MTK Policy Rule
 # ============
 
-allow rild persist_ril_prop:file { read };
-allow rild persist_ril_prop:file { open };
-allow rild persist_ril_prop:file { getattr };
 

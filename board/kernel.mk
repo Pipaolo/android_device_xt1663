@@ -11,6 +11,7 @@ BOARD_MKBOOTIMG_ARGS := --board 1465391499 --ramdisk_offset 0x04f88000 --second_
 
 # Kernel properties
 TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_EXPORT_PRODUCT := kungfu_m
 #KERNEL_TOOLCHAIN := /home/pipao/motom/ubertc/bin/
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
