@@ -15,6 +15,7 @@
 
 # Copy carrier configuration files
 PRODUCT_COPY_FILES += \
+    device/motorola/XT1663/configs/carrier/spn-conf.xml:system/etc/spn-conf.xml \
     device/motorola/XT1663/configs/carrier/cdma_ecc_list.xml:system/vendor/etc/cdma_ecc_list.xml \
     device/motorola/XT1663/configs/carrier/cdma_ecc_list_ss.xml:system/vendor/etc/cdma_ecc_list_ss.xml \
     device/motorola/XT1663/configs/carrier/ecc_list.xml:system/vendor/etc/ecc_list.xml \
