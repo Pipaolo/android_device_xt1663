@@ -23,13 +23,14 @@ PRODUCT_COPY_FILES += \
     device/motorola/XT1663/configs/factory.ini:system/vendor/etc/factory.ini \
     device/motorola/XT1663/configs/fm_cust.cfg:system/vendor/firmware/fm_cust.cfg \
     device/motorola/XT1663/configs/mtklog-config.prop:system/vendor/etc/mtklog-config.prop \
-    device/motorola/XT1663/configs/parerfcontable.txt:system/vendor/etc/perfcontable.txt \
-    device/motorola/XT1663/configs/tition_permission.sh:system/vendor/etc/partition_permission.sh \
-    device/motorola/XT1663/configs/pperfservapplist.txt:system/vendor/etc/perfservapplist.txt \
+    device/motorola/XT1663/configs/perfcontable.txt:system/vendor/etc/perfcontable.txt \
+    device/motorola/XT1663/configs/partition_permission.sh:system/vendor/etc/partition_permission.sh \
+    device/motorola/XT1663/configs/perfservapplist.txt:system/vendor/etc/perfservapplist.txt \
     device/motorola/XT1663/configs/perfservscntbl.txt:system/vendor/etc/perfservscntbl.txt \
     device/motorola/XT1663/configs/recovery.fstab:system/vendor/etc/recovery.fstab \
     device/motorola/XT1663/configs/resmonwhitelist.txt:system/vendor/etc/resmonwhitelist.txt \
     device/motorola/XT1663/configs/emdlogger_usb_config.prop:system/vendor/etc/emdlogger_usb_config.prop
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/motorola/XT1663/configs/thermal,system/vendor/etc/.tp)  
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/motorola/XT1663/configs/wifi,system/etc/wifi)  
 

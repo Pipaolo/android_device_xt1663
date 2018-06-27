@@ -25,5 +25,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/XT1663/configs/ip/openssl.cnf:system/vendor/etc/ipsec/ssl/openssl.cnf \
     device/motorola/XT1663/configs/ip/slp_conf:system/vendor/etc/slp_conf \
     
+    
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/motorola/XT1663/configs/ip/wide-dhcpv6,system/vendor/etc/wide-dhcpv6)  
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/motorola/XT1663/configs/ip/radvd,system/vendor/etc/radvd)  

@@ -42,9 +42,9 @@ $(call add-rootdir-targets, \
     init.project.rc \
     init.rilproxy.rc \
     init.volte.rc \
-		meta_init.modem.rc \
-		meta_init.project.rc \
-		meta_init.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
     ueventd.mt6755.rc)
 
 # sbin: fuelgauged_static
