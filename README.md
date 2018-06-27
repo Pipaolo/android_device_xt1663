@@ -17,6 +17,10 @@ This branch is for building of the LineageOS 14.1.
  * Offline Charging
  * Auto brightness
  * Offline charging
+ * Youtube
+ * MTP
+ * Vibration
+ * All Sensors
 
 ### Not Working:
  
@@ -24,15 +28,10 @@ This branch is for building of the LineageOS 14.1.
  * GPS
  * Bluetooth
  * AGPS
- * Vibration
- * All sensors
  * Flashlight (statusbar and camera)
  * Camera rear/front (video and photo) 
- * RIL for SMS/calls/internet/LTE 
- * MTP 
+ * RIL for SMS/calls/internet/LTE  
  * LED Notifications
  * FM Radio
  * Camera HDR
- * Youtube
- * HW Decoder
  * Hotspot (Open Hotspot)
