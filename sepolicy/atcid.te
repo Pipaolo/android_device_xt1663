@@ -1,25 +1,18 @@
-# ==============================================
 # Policy File of /system/binatcid Executable File 
 
 
-# ==============================================
 # Type Declaration
-# ==============================================
 
 type atcid_exec , exec_type, file_type;
 type atcid ,domain;
 
-# ==============================================
 # Android Policy Rule
-# ==============================================
 
-# ==============================================
+
 # NSA Policy Rule
-# ==============================================
 
-# ==============================================
 # MTK Policy Rule
-# ==============================================
+
 init_daemon_domain(atcid)
 allow atcid self:capability dac_override;
 allow atcid init:unix_stream_socket connectto;
@@ -60,3 +53,7 @@ allow atcid self:capability sys_time;
 
 # Nougat
 allow atcid sysfs:file { read open };
+
+# Add by Pipaolo
+allow init ttyGS_device:chr_file { write };
+allow init ttyGS_device:chr_file { ioctl };

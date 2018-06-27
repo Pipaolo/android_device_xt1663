@@ -49,3 +49,9 @@ allow program_binary init:unix_stream_socket connectto;
 allow platform_app program_binary_service:service_manager find;
 allow untrusted_app program_binary_service:service_manager find;
 allow system_server program_binary_service:service_manager find;
+
+# Add by Pipaolo
+allow init gpu_device:chr_file { write };
+allow init gpu_device:chr_file { getattr };
+allow init gpu_device:chr_file { ioctl };
+#allow init init:binder { call } Never allow

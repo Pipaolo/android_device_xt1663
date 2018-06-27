@@ -119,3 +119,6 @@ allow atci_service storage_file:lnk_file read;
 # Purpose : to operation CCT tool
 allow atci_service cct_data_file:dir { write read open add_name remove_name search create getattr setattr };
 allow atci_service cct_data_file:file { setattr read create write getattr unlink open append };
+
+# Add by Pipaolo
+allow init init:capability { sys_nice };

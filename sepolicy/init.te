@@ -107,3 +107,7 @@ allow init debugfs:file { write };
 allow init surfaceflinger:process { noatsecure };
 allow init mtk_agpsd:process { noatsecure };
 allow init mediaserver:process { noatsecure };
+
+# Add by Pipaolo
+allow init cpuctl_device:file { create };
+allow init cpuctl_device:file { write open };

@@ -60,3 +60,7 @@ allow boot_logo_updater mtd_device:dir search;
 allow boot_logo_updater device:dir write;
 allow boot_logo_updater kmsg_device:chr_file w_file_perms;;
 allow boot_logo_updater proc_lk_env:file rw_file_perms;
+
+# Add by Pipaolo
+allow init graphics_device:chr_file { write };
+allow init graphics_device:chr_file { ioctl };

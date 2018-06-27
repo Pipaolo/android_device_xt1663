@@ -1,0 +1,4 @@
+# Add by Pipaolo
+allow init init:rawip_socket { create };
+allow init init:rawip_socket { getopt };
+allow init init:rawip_socket { setopt };

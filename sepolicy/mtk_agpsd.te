@@ -44,3 +44,8 @@ allow mtk_agpsd mnt_user_file:lnk_file create_file_perms;
 allow mtk_agpsd slpd:unix_dgram_socket sendto;
 allow mtk_agpsd rilproxy:unix_dgram_socket sendto;
 allow mtk_agpsd rootfs:lnk_file { getattr };
+
+# Add by Pipaolo
+allow init agpsd_data_file:sock_file { write };
+allow init agps_device:chr_file { write };
+allow init agps_device:chr_file { ioctl };

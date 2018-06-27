@@ -50,3 +50,10 @@ allow fuelgauged input_device:file { open read };
 # Nougat
 allow fuelgauged rootfs:lnk_file { getattr };
 allow fuelgauged sysfs:file { read open };
+
+# Add by Pipaolo
+allow init kmsg_device:chr_file { write };
+allow init init:netlink_socket { create };
+allow init init:netlink_socket { bind };
+allow init init:netlink_socket { write };
+allow init init:netlink_socket { read };

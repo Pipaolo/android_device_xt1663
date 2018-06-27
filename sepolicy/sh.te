@@ -1,0 +1,4 @@
+# Add by Pipaolo
+allow enableswap toolbox_exec:file { getattr };
+allow enableswap toolbox_exec:file { read open };
+allow enableswap toolbox_exec:file { execute };

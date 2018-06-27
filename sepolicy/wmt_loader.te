@@ -1,4 +1,4 @@
-# ==============================================
+# =============================c=================
 # Policy File of /system/binwmt_loader Executable File 
 
 
@@ -37,3 +37,7 @@ allow wmt_loader wmt_prop:file r_file_perms;
 allow wmt_loader device:chr_file { unlink };
 allow wmt_loader rootfs:lnk_file { getattr };
 init_daemon_domain(wmt_loader)
+
+# Add by Pipaolo
+allow init wmtdetect_device:chr_file { write };
+allow init wmtdetect_device:chr_file { ioctl };

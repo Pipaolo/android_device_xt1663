@@ -1,0 +1,6 @@
+# Add by Pipaolo
+allow init init:netlink_xfrm_socket { create };
+allow init init:netlink_xfrm_socket { bind };
+allow init init:netlink_xfrm_socket { write };
+allow init init:netlink_xfrm_socket { nlmsg_read };
+allow init init:netlink_xfrm_socket { read };

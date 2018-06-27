@@ -32,3 +32,9 @@ allow teei_daemon kmsg_device:chr_file {open write};
 
 #define for mlsconstrain
 typeattribute teei_client_device mlstrustedobject;
+
+# Add by Pipaolo
+allow init teei_vfs_device:chr_file { write };
+allow init teei_config_device:chr_file { write };
+allow init teei_config_device:chr_file { ioctl };
+allow init teei_rpmb_device:chr_file { ioctl };

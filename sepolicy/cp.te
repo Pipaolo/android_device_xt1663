@@ -1,0 +1,5 @@
+# Add by Pipaolo
+allow toolbox nvdata_file:dir { getattr };
+allow toolbox nvdata_file:dir { search };
+allow toolbox nvdata_file:file { getattr };
+allow toolbox nvdata_file:file { read write open };

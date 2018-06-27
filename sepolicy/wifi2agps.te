@@ -28,3 +28,7 @@ allow wifi2agps agpsd_data_file:dir search;
 # Nougat
 allow wifi2agps proc_net:file r_file_perms;
 allow wifi2agps rootfs:lnk_file { getattr };
+
+# Add by Pipaolo
+allow init init:netlink_socket { setopt };
+allow init init:netlink_socket { getattr };

@@ -34,3 +34,6 @@ allow thermald activity_service:service_manager find;
 
 # Nougat
 allow thermald rootfs:lnk_file { getattr };
+
+# Added by Pipaolo
+allow init proc_thermal:file { write };

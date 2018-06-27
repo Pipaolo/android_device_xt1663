@@ -20,3 +20,7 @@ allow memsicd3416x msensor_device:chr_file { open ioctl read write };
 allow memsicd3416x gsensor_device:chr_file { open ioctl read write };
 allow memsicd3416x input_device:dir { search open read write };
 allow memsicd3416x input_device:file { open read };
+
+# Add by Pipaolo
+allow init gsensor_device:chr_file { write };
+allow init msensor_device:chr_file { write ioctl };

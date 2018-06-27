@@ -441,7 +441,7 @@
 /system/bin/memsicd3416x u:object_r:memsicd3416x_exec:s0
 /system/bin/memsicd u:object_r:memsicd_exec:s0
 /system/bin/meta_tst u:object_r:meta_tst_exec:s0
- 
+
 /system/bin/mmc_ffu u:object_r:mmc_ffu_exec:s0
 /system/bin/emmc_rw_debug u:object_r:emmc_rw_debug_exec:s0
 /system/bin/mvg_app u:object_r:mvg_app_exec:s0
@@ -531,7 +531,7 @@
 #fat on nand image
 /fat(/.*)?  u:object_r:fon_image_data_file:s0
 
-#smart audio pa 
+#smart audio pa
 /system/bin/smart_audio.sh  u:object_r:smart_audio_exec:s0
 
 # Fingerprint device
