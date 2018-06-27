@@ -14,13 +14,13 @@ This branch is for building of the LineageOS 14.1.
  * Micro SD support
  * Wi-Fi
  * Audio ( Ultra Low Volume )
- * Offline Charging
  * Auto brightness
  * Offline charging
  * Youtube
  * MTP
  * Vibration
  * All Sensors
+ * LiveDisplay
 
 ### Not Working:
  
