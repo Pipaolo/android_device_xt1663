@@ -20,11 +20,16 @@ persist.radio.fd.r8.counter=150
 persist.radio.fd.off.r8.counter=50
 ro.telephony.default_network=9,9
 
+ro.telephony.ril_class=MT6755
+ro.telephony.ril.config=fakeiccid
+ro.kernel.android.checkjni=0
+
 # Wifi
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
 
 # Graphics
+
 ro.opengles.version=196610
 ro.sf.lcd_density=480

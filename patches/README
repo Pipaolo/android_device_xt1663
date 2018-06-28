@@ -1,0 +1,6 @@
+This is patch directory
+
+cd WORKING_DIR
+
+patch -p1 boinic.patch
+repeat the same
