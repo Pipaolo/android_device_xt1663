@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir,root)
-=======
 # Root
 PRODUCT_PACKAGES += \
     enableswap.sh \
@@ -41,6 +36,3 @@ PRODUCT_PACKAGES += \
  PRODUCT_PACKAGES += \
      libinit \
      init
-
-     # $(LOCAL_PATH)/rootdir/init.rc:root/init.rc
->>>>>>> parent of 59b540a... xt1663: cleanup trees
