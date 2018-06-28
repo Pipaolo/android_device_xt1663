@@ -86,3 +86,10 @@ allow vtservice devmap_device:chr_file ioctl;
 #for using surfaceflinger
 #=====================================
 allow vtservice surfaceflinger_service:service_manager find;
+
+# Add by Pipaolo
+allow vtservice system_data_file:dir { write };
+allow vtservice system_data_file:dir { remove_name };
+allow vtservice system_data_file:dir { add_name };
+allow vtservice system_data_file:sock_file { unlink };
+allow vtservice system_data_file:sock_file { create };

@@ -54,4 +54,8 @@ allow system_server program_binary_service:service_manager find;
 allow init gpu_device:chr_file { write };
 allow init gpu_device:chr_file { getattr };
 allow init gpu_device:chr_file { ioctl };
+allow program_binary program_binary_prop:file { read };
+allow program_binary program_binary_prop:file { open };
+allow program_binary program_binary_prop:file { getattr };
+allow program_binary system_file:file { execute_no_trans };
 #allow init init:binder { call } Never allow

@@ -62,3 +62,4 @@ allow ccci_fsd rootfs:lnk_file { getattr };
 
 # Add by Pipaolo 
 allow init ccci_device:chr_file { write };
+allow init otp_device:chr_file { ioctl };

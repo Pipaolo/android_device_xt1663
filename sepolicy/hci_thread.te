@@ -1,0 +1,3 @@
+# Add by Pipaolo
+allow bluetooth persist_bt_prop:file { read };
+allow bluetooth persist_bt_prop:file { getattr };

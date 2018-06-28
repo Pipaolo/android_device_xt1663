@@ -143,3 +143,6 @@ binder_use(netd)
 allow netd wifi_data_file:dir { create setattr };
 allow netd dhcp_data_file:dir { setattr };
 allow netd wifi_data_file:sock_file { create setattr unlink };
+
+# Add by Pipaolo
+allow netd netd:capability { sys_nice };

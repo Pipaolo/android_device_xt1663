@@ -7,3 +7,8 @@ allow mediacodec sysfs:file { read write open };
 allow mediacodec proc_meminfo:file { read open getattr };
 allow mediacodec rootfs:lnk_file { getattr };
 
+# Add by Pipaolo
+allow mediacodec mtk_mjc_prop:file { read };
+allow mediacodec mtk_mjc_prop:file { open };
+allow mediacodec mtk_mjc_prop:file { getattr };
+

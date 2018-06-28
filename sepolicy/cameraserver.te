@@ -21,3 +21,7 @@ allow cameraserver sensorservice_service:service_manager { find };
 allow cameraserver sysfs:file { read write open getattr };
 allow cameraserver system_server:unix_stream_socket { read write connectto };
 
+# Add by Pipaolo
+allow cameraserver nvdata_file:dir { search };
+allow cameraserver nvdata_file:file { read open };
+allow cameraserver nvdata_file:file { getattr };

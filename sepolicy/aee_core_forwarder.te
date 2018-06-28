@@ -62,3 +62,11 @@ allow aee_core_forwarder mnt_user_file:dir search;
 allow aee_core_forwarder mnt_user_file:lnk_file read;
 #allow aee_core_forwarder storage_file:dir search;
 allow aee_core_forwarder storage_file:lnk_file read;
+
+# Add by Pipaolo
+allow kernel sysfs_wake_lock:file { read write };
+allow kernel sysfs_wake_lock:file { open };
+allow kernel bootanim:file { read };
+allow kernel bootanim:file { open };
+allow kernel bootanim:file { getattr };
+allow kernel bootanim:dir  { search };

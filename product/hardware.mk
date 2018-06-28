@@ -37,6 +37,7 @@ LINKER_FORCED_SHIM_LIBS := /system/vendor/lib64/libui_ext.so|libmtkshim_uiext.so
 LINKER_FORCED_SHIM_LIBS += $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib/libgui_ext.so|libmtkshim_guiext.so:/system/vendor/lib64/libgui_ext.so|libmtkshim_guiext.so
 LINKER_FORCED_SHIM_LIBS += $(LINKER_FORCED_SHIM_LIBS):/system/vendor/bin/vtservice|libmtk_symbols.so
 LINKER_FORCED_SHIM_LIBS += $(LINKER_FORCED_SHIM_LIBS):/system/vendor/bin/program_binary_builder|libmtk_symbols.so
+LINKER_FORCED_SHIM_LIBS += $(LINKER_FORCED_SHIM_LIBS):/system/lib/libandroid_runtime.so|libmtk_symbols.so:/system/lib64/libandroid_runtime.so|libmtk_symbols.so
 
 
 # # Doze Package

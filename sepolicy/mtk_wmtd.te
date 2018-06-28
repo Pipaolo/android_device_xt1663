@@ -1,0 +1,2 @@
+# Add by Pipaolo
+allow kernel mnt_user_file:dir { search };

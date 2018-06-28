@@ -12,3 +12,12 @@ allow fingerprintd fuse:file create_file_perms;
 
 #ET320 etsd
 allow fingerprintd etsd:binder { call transfer };
+
+# Add by Pipaolo
+allow fingerprintd teei_fp_device:chr_file { read write open };
+allow fingerprintd teei_fp_device:chr_file { ioctl };
+allow fingerprintd uhid_device:chr_file { write open };
+allow fingerprintd uhid_device:chr_file { ioctl };
+allow fingerprintd system_data_file:dir { write };
+allow fingerprintd system_data_file:dir { add_name };
+allow fingerprintd system_data_file:sock_file { create };

@@ -1,0 +1,3 @@
+# Add by Pipaolo
+allow init stpwmt_device:chr_file { write };
+allow init stpwmt_device:chr_file { ioctl };
