@@ -83,3 +83,7 @@ allow mnld mtkFlpDaemon_data_file:sock_file create_file_perms;
 # Nougat
 allow mnld wmt_prop:file r_file_perms;
 allow mnld rootfs:lnk_file { getattr };
+
+# Add by Pipaolo
+allow init mtk_agpsd:unix_dgram_socket sendto;
+allow mtk_agpsd init:unix_dgram_socket sendto;

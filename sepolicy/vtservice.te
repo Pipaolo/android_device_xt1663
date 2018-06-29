@@ -93,3 +93,5 @@ allow vtservice system_data_file:dir { remove_name };
 allow vtservice system_data_file:dir { add_name };
 allow vtservice system_data_file:sock_file { unlink };
 allow vtservice system_data_file:sock_file { create };
+allow vtservice mtk_em_ims_simulate_prop:file { read open };
+allow vtservice mtk_em_ims_simulate_prop:file { getattr };

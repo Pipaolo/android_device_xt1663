@@ -10,9 +10,10 @@ LOCAL_SRC_FILES := \
     mtk_ui.cpp \
     mtk_wvm.cpp \
     mtk_xlog.cpp \
-		program_binary_builder.cpp \
-		vtservice.cpp \
-		misc.cpp
+    program_binary_builder.cpp \
+    vtservice.cpp \
+    misc.cpp \
+    mtk_mal.cpp
 		
 
 # only for 64bit libraries

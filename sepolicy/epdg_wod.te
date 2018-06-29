@@ -68,3 +68,10 @@ allow epdg_wod device:lnk_file create;
 # Purpose: Kill Process
 allow epdg_wod system_server:process { signal signull };
 allow epdg_wod kernel:process signal;
+
+# Add by Pipaolo
+allow epdg_wod devpts:chr_file { read write open};
+allow epdg_wod persist_wod_prop:file { read open };
+allow epdg_wod persist_wod_prop:file { getattr };
+allow epdg_wod mtk_wod_prop:file { read open };
+allow epdg_wod mtk_wod_prop:file { getattr };

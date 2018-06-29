@@ -102,3 +102,12 @@ allow mtkmal wfca:unix_stream_socket connectto;
 
 #for timer
 allow mtkmal self:capability2 wake_alarm;
+
+# Add by Pipaolo
+allow mtkmal persist_mal_prop:file { read open };
+allow mtkmal persist_mal_prop:file { getattr };
+allow mtkmal system_file:dir { read open };
+allow mtkmal mtk_wfc_prop:file { read open };
+allow mtkmal mtk_wfc_prop:file { getattr };
+allow mtkmal mtk_volte_prop:file { read open };
+allow mtkmal mtk_volte_prop:file { getattr };

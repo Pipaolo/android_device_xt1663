@@ -89,6 +89,7 @@ allow init gyroscope_device:chr_file { ioctl };
 allow init gsensor_device:chr_file { ioctl };
 allow init mtk-adc-cali_device:chr_file { write };
 allow init mtk-adc-cali_device:chr_file { ioctl };
+allow nvram_daemon block_device:blk_file { read write open };
 
 # Nougat
 allow nvram_daemon sysfs:file { write read open };

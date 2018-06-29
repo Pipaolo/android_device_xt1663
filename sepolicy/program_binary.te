@@ -57,5 +57,8 @@ allow init gpu_device:chr_file { ioctl };
 allow program_binary program_binary_prop:file { read };
 allow program_binary program_binary_prop:file { open };
 allow program_binary program_binary_prop:file { getattr };
+allow program_binary system_file:dir { read open };
 allow program_binary system_file:file { execute_no_trans };
+allow program_binary proc:file { read open };
+allow program_binary proc:file { ioctl };
 #allow init init:binder { call } Never allow
