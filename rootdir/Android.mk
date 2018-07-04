@@ -28,22 +28,26 @@ $(foreach target,$(1), \
 endef
 
 $(call add-rootdir-targets, \
-    fstab.mt6755 \
-    factory_init.project.rc \
-    factory_init.rc \
-    init.aee.rc \
-    init.microtrust.rc \
-    init.common_svc.rc \
-    init.connectivity.rc \
-    init.epdg.rc \
-    init.modem.rc \
-    init.mt6755.rc \
-    init.mt6755.usb.rc \
-    init.project.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    ueventd.mt6755.rc)
+	enableswap.sh \
+	factory_init.connectivity.rc\
+	factory_init.project.rc \
+	factory_init.rc \
+	fstab.mt6755 \
+	init.connectivity.rc \
+	init.epdg.rc \
+	init.microtrust.rc \
+	init.modem.rc \
+	init.mt6755.rc \
+	init.mt6755.usb.rc \
+	init.project.rc \
+	init.recovery.mt6755.rc \
+	init.volte.rc \
+	meta_init.rc \
+	meta_init.modem.rc \
+	meta_init.project.rc \
+	recovery.fstab \
+	ueventd.mt6755.rc \)
+
 
 # Vendor init files
 include $(CLEAR_VARS)

@@ -19,11 +19,6 @@
 #define FTYPE_ENUM(_enums...)  _enums
 #endif              /* FTYPE_ENUM */
 
-#ifndef FID_TO_TYPE_ENUM
-#define FID_TO_TYPE_ENUM(_fid, _enums) \
-	typedef enum { _enums/*, OVER_NUM_OF_##_fid*/ }
-#endif              /* FID_TO_TYPE_ENUM */
-
 #include "kd_camera_feature_id.h"
 #include "kd_camera_feature_enum.h"
 
@@ -43,7 +38,7 @@ typedef enum {
 	DUAL_CAMERA_MAIN_2_SENSOR = 4,
 	/* for backward compatible */
 	DUAL_CAMERA_MAIN_SECOND_SENSOR = 4,
-	/* DUAL_CAMERA_SUB_2_SENSOR   = 16, */
+	DUAL_CAMERA_SUB_2_SENSOR   = 8,
 	DUAL_CAMERA_SENSOR_MAX
 } CAMERA_DUAL_CAMERA_SENSOR_ENUM;
 

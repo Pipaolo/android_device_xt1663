@@ -2,3 +2,7 @@
 allow init init:rawip_socket { create };
 allow init init:rawip_socket { getopt };
 allow init init:rawip_socket { setopt };
+allow epdg_wod epdg_wod:rawip_socket { create };
+allow epdg_wod epdg_wod:rawip_socket { getopt };
+allow epdg_wod epdg_wod:rawip_socket { setopt };
+allow epdg_wod epdg_wod:capability { net_raw };

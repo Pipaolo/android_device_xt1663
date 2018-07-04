@@ -2,8 +2,8 @@
 #
 # system.prop for Motorola M
 #
-# RIL
-rrild.libpath=mtk-ril.so
+
+rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
 
@@ -265,6 +265,3 @@ dalvik.vm.isa.arm64.variant=cortex-a53
 dalvik.vm.isa.arm64.features=default
 dalvik.vm.isa.arm.variant=cortex-a53
 dalvik.vm.isa.arm.features=default
-net.bt.name=Android
-dalvik.vm.stack-trace-file=/data/anr/traces.txt
-ro.expect.recovery_id=0xf76640f267f105a7b531d336549778471d265d1b000000000000000000000000

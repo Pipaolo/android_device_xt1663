@@ -66,7 +66,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <signal.h>
-#include <linux/mtk_agps_common.h>
+#include "include/linux/mtk_agps_common.h"
 #include <private/android_filesystem_config.h>
 // #include <linux/mtgpio.h>
 
@@ -99,7 +99,7 @@
 #include <sys/_system_properties.h>
 #endif
 
-#include <hardware/gps_mtk.h>
+#include "include/hardware/gps_mtk.h"
 
 /* the name of the controlled socket */
 #define  GPS_CHANNEL_NAME       "/dev/gps"

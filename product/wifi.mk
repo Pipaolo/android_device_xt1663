@@ -6,6 +6,6 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
    libwpa_client \
-    hostapd \
+   hostapd \
     wpa_supplicant \
     lib_driver_cmd_mt66xx

@@ -20,3 +20,6 @@ allow audioserver nvdata_file:file { open };
 allow audioserver nvdata_file:file { getattr };
 allow audioserver wmt_prop:file { read open };
 allow audioserver wmt_prop:file { getattr };
+allow audioserver smartpa1_device:chr_file { ioctl };
+allow audioserver smartpa1_device:chr_file { read write open };
+allow audioserver media_rw_data_file:dir { search };

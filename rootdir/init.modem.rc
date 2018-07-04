@@ -158,12 +158,6 @@ service ccci3_mdinit /vendor/bin/ccci_mdinit 2
     class core
     oneshot
 
-service ccci_rpcd /vendor/bin/ccci_rpcd 0
-    user radio
-    group radio system
-    class core
-    oneshot
-
 service pppd_gprs /system/bin/pppd_dt /dev/ttyACM0 debug noauth refuse-eap usepeerdns nodetach
     user root
     group radio cache inet misc

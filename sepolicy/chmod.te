@@ -1,2 +1,3 @@
 # Add by Pipaolo
 allow toolbox nvdata_file:file { setattr };
+allow toolbox block_device:blk_file { setattr };

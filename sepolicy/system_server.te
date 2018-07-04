@@ -313,5 +313,3 @@ allow system_server wifi_data_file:sock_file { unlink };
 
 # Add by Pipaolo
 allow system_server init:unix_dgram_socket sendto;
-allow system_server block_device:blk_file { read open };
-allow system_server block_device:blk_file { ioctl };

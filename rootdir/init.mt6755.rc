@@ -19,7 +19,6 @@ import init.chiptest.rc
 import init.modem.rc
 # *** DO NOT import the new rc file after this line ***
 
-
 on early-init
     write /proc/ppm/policy/userlimit_min_cpu_freq "1 1508000"
     write /proc/ppm/policy/userlimit_min_cpu_core "1 1"
@@ -28,9 +27,6 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-
-    export LD_PRELOAD "libmtk_symbols.so"
-    export LD_SHIM_LIBS "/system/vendor/lib64/libui_ext.so|libmtk_symbols.so:/system/vendor/lib/libui_ext.so|libmtk_symbols.so:/system/lib64/libui_ext.so|libmtk_symbols.so:/system/lib/libui_ext.so|libmtk_symbols.so"
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
 
@@ -591,8 +587,7 @@ on post-fs-data
 
     # SMI
     chmod 0660 /dev/MTK_SMI
-    chown system camera /dev/MTK_SMI
-
+    chown media media /dev/MTK_SMI
 
    #change partition permission
 
@@ -1026,18 +1021,18 @@ service dhcp_inform /system/bin/dhcpcd -s -BK -A
     disabled
     oneshot
 
-service dhcpv6_inform /vendor/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cSIP.conf" -Dfi
+service dhcpv6_inform /vendor/bin/dhcp6c -c "/vendor/etc/wide-dhcpv6/dhcp6cSIP.conf" -Dfi
     class main
     user root
     group system radio dhcp net_admin net_raw
     disabled
     oneshot
 
-service dhcp6cDNS_wlan0 /vendor/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cDNS.conf" -Df wlan0
+service dhcp6cDNS_wlan0 /vendor/bin/dhcp6c -c "/vendor/etc/wide-dhcpv6/dhcp6cDNS.conf" -Df wlan0
     disabled
     oneshot
 
-service dhcp6c_wlan0 /vendor/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6c.conf" -Df wlan0
+service dhcp6c_wlan0 /vendor/bin/dhcp6c -c "/vendor/etc/wide-dhcpv6/dhcp6c.conf" -Df wlan0
     disabled
     oneshot
 
@@ -1047,7 +1042,7 @@ on property:service.dhcp6c_wlan0.enable=0
 on property:service.dhcp6c_wlan0.enable=1
     start dhcp6c_wlan0
 
-service dhcp6c_PD /vendor/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cPD.conf" -Df
+service dhcp6c_PD /vendor/bin/dhcp6c -c "/vendor/etc/wide-dhcpv6/dhcp6cPD.conf" -Df
     disabled
     oneshot
 
@@ -1119,11 +1114,7 @@ service vtservice /vendor/bin/vtservice
 service mediacodec /system/bin/mediacodec
     class main
     user mediacodec
-<<<<<<< HEAD   (e2ebf0 [ALPS02829267] usb:add sn access policy)
-    group media system audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm sdcard_rw
-=======
     group media system audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm sdcard_r media_rw
->>>>>>> BRANCH (993b8c [ALPS02768640] Add necessary permission for VP dump)
     ioprio rt 4
 
 service cmmb /system/bin/cmmbsp

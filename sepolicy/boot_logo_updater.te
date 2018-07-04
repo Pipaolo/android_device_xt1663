@@ -67,4 +67,3 @@ allow init graphics_device:chr_file { ioctl };
 allow boot_logo_updater sysfs:file { read open };
 allow boot_logo_updater rootfs:file { read open };
 allow boot_logo_updater rootfs:file { getattr };
-allow boot_logo_updater block_device:blk_file { read open };

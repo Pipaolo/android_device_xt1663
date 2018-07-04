@@ -1,3 +1,5 @@
 # Add by Pipaolo
 allow bluetooth persist_bt_prop:file { read };
 allow bluetooth persist_bt_prop:file { getattr };
+allow bluetooth wmt_prop:file { open };
+allow bluetooth wmt_prop:file { getattr };

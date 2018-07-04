@@ -35,5 +35,8 @@ allow ged_srv mtk_sf_prop:property_service set;
 allow ged_srv init:unix_stream_socket connectto;
 
 # Add by Pipaolo
+#allow ged_srv debugfs:file { write open };
+#allow ged_srv debugfs:file { getattr };
 allow init init:netlink_kobject_uevent_socket { create };
 allow init init:netlink_kobject_uevent_socket { setopt };
+allow ged_srv proc:file { read open };

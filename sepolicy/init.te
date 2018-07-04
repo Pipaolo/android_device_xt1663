@@ -111,3 +111,5 @@ allow init mediaserver:process { noatsecure };
 # Add by Pipaolo
 allow init cpuctl_device:file { create };
 allow init cpuctl_device:file { write open };
+allow init wmtWifi_device:chr_file { write };
+allow init teei_daemon_exec:file { getattr };

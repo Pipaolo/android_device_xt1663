@@ -1,0 +1,3 @@
+# Add by Pipaolo
+allow ged_srv sysfs:file { read open };
+allow ged_srv proc:file { ioctl };

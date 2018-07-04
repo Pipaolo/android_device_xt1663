@@ -1,6 +1,5 @@
 This is patch directory
 
 cd WORKING_DIR
-
-patch -p1 boinic.patch
-repeat the same
+sh device/elephone/p9000/patches/install.sh
+sh device/elephone/p9000/patches/uninstall.sh
